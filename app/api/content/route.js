@@ -24,7 +24,6 @@
 //     return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
 //   }
 // }
-
 import { NextResponse } from "next/server";
 
 // URL to your external JSON file
@@ -38,14 +37,13 @@ export async function GET() {
   try {
     const res = await fetch(JSON_URL);
     const data = await res.json();
-
     return NextResponse.json({ ok: true, data });
   } catch (err) {
     return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
   }
 }
 
-// POST = send updated JSON to your PHP file
+// POST = update JSON through PHP server
 export async function POST(request) {
   try {
     const body = await request.json();
@@ -57,7 +55,6 @@ export async function POST(request) {
       );
     }
 
-    // Send updated JSON to PHP server
     const res = await fetch(UPDATE_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -67,6 +64,9 @@ export async function POST(request) {
     const result = await res.json();
     return NextResponse.json(result);
   } catch (err) {
-    return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, error: String(err) },
+      { status: 500 }
+    );
   }
 }
