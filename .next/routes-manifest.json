@@ -1,0 +1,213 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/auth/[...nextauth]",
+      "regex": "^/api/auth/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPnextauth": "nxtPnextauth"
+      },
+      "namedRegex": "^/api/auth/(?<nxtPnextauth>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/content/[key]",
+      "regex": "^/api/content/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPkey": "nxtPkey"
+      },
+      "namedRegex": "^/api/content/(?<nxtPkey>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/website-content/[id]",
+      "regex": "^/api/website\\-content/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/website\\-content/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/api/content",
+      "regex": "^/api/content(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/content(?:/)?$"
+    },
+    {
+      "page": "/api/save-content",
+      "regex": "^/api/save\\-content(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/save\\-content(?:/)?$"
+    },
+    {
+      "page": "/api/website-content",
+      "regex": "^/api/website\\-content(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/website\\-content(?:/)?$"
+    },
+    {
+      "page": "/api/website-content/pages-sections",
+      "regex": "^/api/website\\-content/pages\\-sections(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/website\\-content/pages\\-sections(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/features",
+      "regex": "^/features(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features(?:/)?$"
+    },
+    {
+      "page": "/features/offline-study",
+      "regex": "^/features/offline\\-study(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/offline\\-study(?:/)?$"
+    },
+    {
+      "page": "/features/one-to-one-lessons",
+      "regex": "^/features/one\\-to\\-one\\-lessons(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/one\\-to\\-one\\-lessons(?:/)?$"
+    },
+    {
+      "page": "/features/practice-material",
+      "regex": "^/features/practice\\-material(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/practice\\-material(?:/)?$"
+    },
+    {
+      "page": "/features/progress-tracking",
+      "regex": "^/features/progress\\-tracking(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/progress\\-tracking(?:/)?$"
+    },
+    {
+      "page": "/features/reward-system",
+      "regex": "^/features/reward\\-system(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/reward\\-system(?:/)?$"
+    },
+    {
+      "page": "/features/study-material",
+      "regex": "^/features/study\\-material(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/study\\-material(?:/)?$"
+    },
+    {
+      "page": "/features/study-tools",
+      "regex": "^/features/study\\-tools(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/study\\-tools(?:/)?$"
+    },
+    {
+      "page": "/features/support-system",
+      "regex": "^/features/support\\-system(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/support\\-system(?:/)?$"
+    },
+    {
+      "page": "/features/video-lessons",
+      "regex": "^/features/video\\-lessons(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/video\\-lessons(?:/)?$"
+    },
+    {
+      "page": "/features/voice-recognition",
+      "regex": "^/features/voice\\-recognition(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features/voice\\-recognition(?:/)?$"
+    },
+    {
+      "page": "/level-guide",
+      "regex": "^/level\\-guide(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/level\\-guide(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/membership",
+      "regex": "^/membership(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/membership(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
