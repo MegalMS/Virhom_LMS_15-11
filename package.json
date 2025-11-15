@@ -12,11 +12,8 @@
     "framer-motion": "^12.23.24",
     "install": "^0.13.0",
     "lucide-react": "^0.553.0",
-<<<<<<< HEAD
     "mongoos": "^0.0.1-security",
     "mongoose": "^8.19.3",
-=======
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
     "next": "^16.0.1",
     "next-auth": "^4.24.13",
     "npm": "^11.6.2",

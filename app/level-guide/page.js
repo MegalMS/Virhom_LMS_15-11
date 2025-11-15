@@ -1,12 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { GraduationCap, CheckCircle, Target, TrendingUp } from "lucide-react";
-<<<<<<< HEAD
 import { usePathname } from "next/navigation";
 
 
-=======
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
 
 // Animation wrapper
 const FadeInView = ({ children, className, delay = 0 }) => {
@@ -29,7 +26,6 @@ const FadeInView = ({ children, className, delay = 0 }) => {
 };
 
 export default function Page() {
-<<<<<<< HEAD
     const pathname = usePathname();
     const slug = pathname.split("/").pop();
     // const toolData = studyToolsData[slug];
@@ -103,107 +99,6 @@ useEffect(() => {
   // NOW SAFE: destructure only after confirming contents exists
   const { header, table, levels, levelDetails } = contents;
 
-=======
-  const levels = [
-    {
-      tab: "Beginner (A1)",
-      title: "Beginner (A1)",
-      cefr: "A1",
-      abilities:
-        "You understand and can use some basic English phrases to say hello, goodbye, thank you, etc. You can also say a few things about yourself (name, nationality, age, possessions), but you are not able to understand or engage in a conversation or any form of written exchange.",
-      goals: [
-        "Learn the basic structure and the most common daily vocabulary and phrases.",
-        "Open your ears to English sounds and rhythm by hearing English in the background (without trying to understand anything).",
-      ],
-      milestones: ["Master basic greetings", "Learn personal details", "Build confidence"],
-    },
-    {
-      tab: "Elementary (A2)",
-      title: "Elementary (A2)",
-      cefr: "A2",
-      abilities:
-        "You can understand frequently used expressions and communicate in simple tasks requiring a direct exchange of information. You can describe your background and immediate environment.",
-      goals: [
-        "Expand your vocabulary and improve your pronunciation.",
-        "Understand short phrases and simple sentences used in daily life.",
-      ],
-      milestones: ["Expand vocabulary", "Improve pronunciation", "Simple conversations"],
-    },
-    {
-      tab: "Intermediate (B1-B2)",
-      title: "Intermediate (B1-B2)",
-      cefr: "B1-B2",
-      abilities:
-        "You can understand the main points of clear standard input on familiar matters regularly encountered in work, school, and leisure.",
-      goals: [
-        "Learn to express opinions, agree/disagree, and describe events clearly.",
-        "Start reading and listening to English media for comprehension.",
-      ],
-      milestones: ["Express opinions", "Understand media", "Complex sentences"],
-    },
-    {
-      tab: "Advanced (C1)",
-      title: "Advanced (C1)",
-      cefr: "C1",
-      abilities:
-        "You can express yourself fluently and spontaneously without much obvious searching for expressions. You use language flexibly for social, academic, and professional purposes.",
-      goals: [
-        "Improve advanced grammar and idiomatic expressions.",
-        "Work on writing essays and formal correspondence.",
-      ],
-      milestones: ["Master idioms", "Write formally", "Professional English"],
-    },
-    {
-      tab: "Fluent (C1+)",
-      title: "Fluent (C1+)",
-      cefr: "C1+",
-      abilities:
-        "You can understand demanding texts and recognize implicit meaning. You can express ideas fluently and use language effectively for professional purposes.",
-      goals: [
-        "Refine your accent and vocabulary range.",
-        "Engage in debates and discussions on complex topics.",
-      ],
-      milestones: ["Refine accent", "Advanced vocabulary", "Debate fluency"],
-    },
-    {
-      tab: "Proficient (C2)",
-      title: "Proficient (C2)",
-      cefr: "C2",
-      abilities:
-        "You can understand practically everything you hear or read and express yourself spontaneously, fluently, and precisely.",
-      goals: [
-        "Perfect your understanding of cultural nuances in communication.",
-        "Write and speak with precision and natural flow.",
-      ],
-      milestones: ["Cultural nuance", "Precise expression", "Natural fluency"],
-    },
-    {
-      tab: "Expert (C2+)",
-      title: "Expert (Near Native) (C2+)",
-      cefr: "C2+",
-      abilities:
-        "You have a level of English comparable to that of a well-educated native speaker.",
-      goals: [
-        "Master stylistic variety and cultural references in all contexts.",
-        "Communicate effortlessly with full natural fluency.",
-      ],
-      milestones: ["Master stylistic variety", "Native-like fluency", "Expert proficiency"],
-    },
-  ];
-
-  const [activeTab, setActiveTab] = useState(0);
-
-  // Color Palette
-  const colors = {
-    primary: "#4169E1",       // Royal Blue
-    secondary: "#7B68EE",     // Medium Slate Blue
-    accent: "#FFF7AE",        // Soft Pastel Yellow
-    white: "#FFFFFF",         // White
-    dark: "#333333",          // Dark Gray
-    lightBg: "#F8FAFF",
-  };
-
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
   return (
     <>
       {/* Background */}
@@ -228,38 +123,22 @@ useEffect(() => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4169E1]/10 border border-[#4169E1]/20 mb-6">
               <div className="w-2 h-2 rounded-full" style={{ backgroundColor: colors.primary }} />
               <span className="text-sm font-semibold" style={{ color: colors.primary }}>
-<<<<<<< HEAD
                 {header.badge}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: colors.dark }}>
               {header.title.replace(header.highlight, "")}{" "}
-=======
-                English Proficiency Levels
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb- 4" style={{ color: colors.dark }}>
-              From Beginner to{" "}
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
               <span
                 className="bg-gradient-to-r bg-clip-text text-transparent"
                 style={{
                   backgroundImage: `linear-gradient(to right, ${colors.primary}, ${colors.secondary})`,
                 }}
               >
-<<<<<<< HEAD
                 {header.highlight}
               </span>
             </h1>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: "#666666" }}>
               {header.subtitle}
-=======
-                Expert Fluency
-              </span>
-            </h1>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#666666" }}>
-              Aligned with CEFR standards, our structured levels help you track progress and achieve your English language goals
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
             </p>
           </FadeInView>
         </div>
@@ -270,10 +149,6 @@ useEffect(() => {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <FadeInView delay={100}>
             <div className="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-[#E8E8E8]/50">
-<<<<<<< HEAD
-=======
-              {/* Table Header */}
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
@@ -284,7 +159,6 @@ useEffect(() => {
                         borderColor: "#E8E8E8",
                       }}
                     >
-<<<<<<< HEAD
                       {table.headers.map((headerText, i) => (
                         <th
                           key={i}
@@ -297,18 +171,6 @@ useEffect(() => {
                           </div>
                         </th>
                       ))}
-=======
-                      <th className="px-6 py-4 text-left text-sm font-semibold" style={{ color: colors.dark }}>
-                        <div className="flex items-center gap-2">
-                          <TrendingUp className="w-4 h-4" style={{ color: colors.primary }} />
-                          VirHom Level
-                        </div>
-                      </th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold" style={{ color: colors.dark }}>CEFR</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold" style={{ color: colors.dark }}>IELTS</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold" style={{ color: colors.dark }}>Cambridge</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold" style={{ color: colors.dark }}>TOEFL iBT</th>
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
                     </tr>
                   </thead>
                   <tbody>
@@ -356,14 +218,9 @@ useEffect(() => {
 
               {/* Notes */}
               <div className="px-6 py-4 space-y-2 text-xs" style={{ backgroundColor: "#F8F8F8", borderTop: "1px solid #E8E8E8", color: "#666666" }}>
-<<<<<<< HEAD
                 {table.notes.map((note, i) => (
                   <p key={i}>{note}</p>
                 ))}
-=======
-                <p>* CEFR: Common European Framework of Reference for Languages</p>
-                <p>** Cambridge: KET (Key), PET (Preliminary), FCE (First), CAE (Advanced), CPE (Proficiency)</p>
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
               </div>
             </div>
           </FadeInView>
@@ -424,11 +281,7 @@ useEffect(() => {
                       {levels[activeTab].title}
                     </h2>
                     <p style={{ color: "#666666" }}>
-<<<<<<< HEAD
                       {levelDetails.progressTagline}
-=======
-                      Progress toward fluency and professional proficiency
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
                     </p>
                   </div>
                 </div>
@@ -442,11 +295,7 @@ useEffect(() => {
                     <div className="flex items-center gap-3 mb-4">
                       <CheckCircle size={24} style={{ color: colors.primary }} />
                       <h3 className="text-xl font-semibold" style={{ color: colors.dark }}>
-<<<<<<< HEAD
                         {levelDetails.abilitiesLabel}
-=======
-                        Your Abilities
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
                       </h3>
                     </div>
                     <p className="leading-relaxed text-base" style={{ color: "#666666" }}>
@@ -459,19 +308,11 @@ useEffect(() => {
                     <div className="flex items-center gap-3 mb-4">
                       <Target size={24} style={{ color: colors.primary }} />
                       <h3 className="text-xl font-semibold" style={{ color: colors.dark }}>
-<<<<<<< HEAD
                         {levelDetails.goalsLabel}
                       </h3>
                     </div>
                     <p className="mb-4 text-base" style={{ color: "#666666" }}>
                       {levelDetails.goalsIntro}
-=======
-                        Your Goals
-                      </h3>
-                    </div>
-                    <p className="mb-4 text-base" style={{ color: "#666666" }}>
-                      Working through this level, you will:
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
                     </p>
                     <ul className="space-y-3">
                       {levels[activeTab].goals.map((goal, i) => (
@@ -492,11 +333,7 @@ useEffect(() => {
                 {/* Milestones */}
                 <div className="mt-12 pt-12 border-t border-[#E8E8E8]">
                   <h4 className="text-lg font-semibold mb-6" style={{ color: colors.dark }}>
-<<<<<<< HEAD
                     {levelDetails.milestonesLabel}
-=======
-                    Key Milestones
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {levels[activeTab].milestones.map((milestone, i) => (
@@ -554,7 +391,6 @@ useEffect(() => {
 }
 
 
-<<<<<<< HEAD
 // "use client";
 // import React, { useState, useEffect } from "react";
 // import { GraduationCap, CheckCircle, Target, TrendingUp } from "lucide-react";
@@ -969,8 +805,6 @@ useEffect(() => {
 // }
 
 
-=======
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
 
 // // // "use client";
 // // // import React from "react";

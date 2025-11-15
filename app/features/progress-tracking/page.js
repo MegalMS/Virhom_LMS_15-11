@@ -1,23 +1,11 @@
 "use client";
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import StudyToolsSection from "../../../src/components/StudyToolsSection";
 // import { studyToolsData } from "../../../data/studyToolsData";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
- 
+import jsondata from "@/data/content.json";
 
-=======
-import React from "react";
-import StudyToolsSection from "../../../src/components/StudyToolsSection";
-import { studyToolsData } from "../../../src/data/studyToolsData";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-
-// ✅ Reusable SVG constant (check icon)
-const CHECK_ICON =
-  "data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 512 512'%3E%3Cpath fill='%234169E1' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E";
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
 
 // ✅ Reusable section heading with blue underline
 function Heading({ children, color = "#4169E1" }) {
@@ -34,7 +22,6 @@ function Heading({ children, color = "#4169E1" }) {
   );
 }
 
-<<<<<<< HEAD
 export default function CompletedLessonsPage() {
   const pathname = usePathname();
   const slug = pathname.split("/").pop();
@@ -81,31 +68,6 @@ useEffect(() => {
   if (!toolData || !contents)
     return <p className="text-center mt-10 text-red-500">{contents?.notFoundMessage || "404 - Not Found"}</p>;
 
-=======
-// ✅ Reusable checklist component (for possible future use)
-function CheckItem({ children }) {
-  return (
-    <li className="flex items-start gap-3 mb-3">
-      <img
-        src={CHECK_ICON}
-        alt="check"
-        className="w-5 h-5 mt-1 flex-shrink-0"
-      />
-      <span className="text-base leading-relaxed">{children}</span>
-    </li>
-  );
-}
-
-export default function CompletedLessonsPage() {
-  const pathname = usePathname();
-  const slug = pathname.split("/").pop();
-  const toolData = studyToolsData[slug];
-
-  if (!toolData) {
-    return <p className="text-center mt-10 text-red-500">404 - Not Found</p>;
-  }
-
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
   return (
     <main style={{ backgroundColor: "#FFF7AE" }} className="min-h-screen">
       {/* === Top Section: Dynamic Study Tool Header === */}
@@ -121,7 +83,6 @@ export default function CompletedLessonsPage() {
         className="py-20 flex justify-center"
       >
         <div className="max-w-4xl w-full px-6 md:px-10 text-left">
-<<<<<<< HEAD
           {contents.sections.map((section, index) => (
             <div key={index} className="mb-20 bg-white p-8">
               <Heading color={section.color}>{section.heading}</Heading>
@@ -131,51 +92,11 @@ export default function CompletedLessonsPage() {
               />
             </div>
           ))}
-=======
-
-          {/* === Completed lessons === */}
-          <div className="mb-20 bg-white p-8">
-            <Heading color="#4169E1">Completed lessons</Heading>
-            <p className="text-gray-700 leading-relaxed text-[16px] md:text-[17px]">
-              A lesson is considered <strong>“completed”</strong> when you have taken the
-              test for that lesson and achieved the minimum pass rate. You can then move
-              on to the next lesson in your personal study plan. You can easily see —
-              both in your study plan and on your dashboard — which lessons you’ve
-              completed and which ones still need review.
-            </p>
-          </div>
-
-          {/* === Test results & progress charts === */}
-          <div className="mb-20 bg-white p-8">
-            <Heading color="#7B68EE">Test results & progress charts</Heading>
-            <p className="text-gray-700 leading-relaxed text-[16px] md:text-[17px]">
-              Every time you take a test, your score is automatically recorded in your
-              progress chart. This helps you track improvement over time for each topic.
-              Our goal is to help you reach <strong>100%</strong> on every test by giving
-              you detailed feedback on your performance.
-            </p>
-          </div>
-
-          {/* === Feedback & recommendations === */}
-          <div className="mb-16 bg-white p-8">
-            <Heading color="#4169E1">Feedback & recommendations</Heading>
-            <p className="text-gray-700 leading-relaxed text-[16px] md:text-[17px] mb-8">
-              Our feedback system highlights your mistakes, gives you useful tips, and
-              directs you to the exact section of the lesson you need to revise. Once
-              you’ve made your revisions, you can retake the test for additional
-              feedback and improvement.
-            </p>
-          </div>
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
 
           {/* === Centered CTA Link === */}
           <div className="text-center mt-12">
             <Link
-<<<<<<< HEAD
               href={contents.cta.href}
-=======
-              href="/features"
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
               className="inline-flex items-center font-semibold text-lg px-8 py-4 rounded-full transition-all shadow-md hover:shadow-xl"
               style={{
                 backgroundColor: "#4169E1",
@@ -188,11 +109,7 @@ export default function CompletedLessonsPage() {
                 (e.currentTarget.style.backgroundColor = "#4169E1")
               }
             >
-<<<<<<< HEAD
               {contents.cta.text}
-=======
-              View all features
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -212,7 +129,6 @@ export default function CompletedLessonsPage() {
     </main>
   );
 }
-<<<<<<< HEAD
 
 
 // "use client";
@@ -350,5 +266,3 @@ export default function CompletedLessonsPage() {
 //     </main>
 //   );
 // }
-=======
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef

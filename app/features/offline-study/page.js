@@ -1,18 +1,10 @@
 "use client";
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import StudyToolsSection from "../../../src/components/StudyToolsSection";
 // import { studyToolsData } from "../../../data/studyToolsData";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
- 
-=======
-import React from "react";
-import StudyToolsSection from "../../../src/components/StudyToolsSection";
-import { studyToolsData } from "../../../src/data/studyToolsData";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
+import jsondata from "@/data/content.json";
 
 // ✅ Reusable heading component
 function Heading({ children, color = "#4169E1" }) {
@@ -33,7 +25,6 @@ function Heading({ children, color = "#4169E1" }) {
 export default function AccessAnywherePage() {
   const pathname = usePathname();
   const slug = pathname.split("/").pop();
-<<<<<<< HEAD
   const [contents, setContents] = useState(jsondata);
   const toolData = contents?.toolData;
   const [loading, setLoading] = useState(true);
@@ -77,17 +68,6 @@ useEffect(() => {
         {contents?.notFoundMessage || "404 - Not Found"}
       </p>
     );
-=======
-  const toolData = studyToolsData[slug];
-
-  if (!toolData) {
-    return (
-      <p className="text-center mt-10 text-red-500 text-lg font-Montserrat">
-        404 - Not Found
-      </p>
-    );
-  }
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
 
   return (
     <main
@@ -108,7 +88,6 @@ useEffect(() => {
       <section className="py-20 flex justify-center">
         <div className="max-w-4xl w-full px-6 md:px-10 text-left bg-white p-10 rounded-2xl ">
           <div className="mb-16">
-<<<<<<< HEAD
             {contents.sections.map((section, index) => (
               <div key={index}>
                 <Heading color={section.color}>{section.heading}</Heading>
@@ -117,36 +96,12 @@ useEffect(() => {
                 </p>
               </div>
             ))}
-=======
-            <Heading>Access anytime & anywhere</Heading>
-
-            <p className="leading-relaxed text-[16px] md:text-[17px] mb-6">
-              It can be frustrating not to be able to study English when you have
-              the opportunity and the time, but no Internet access. To avoid this
-              situation, we have made all the video lessons and audio recordings
-              downloadable so you can access them offline anytime, anywhere.
-            </p>
-
-            <Heading color="#7B68EE">Working with pen and paper</Heading>
-
-            <p className="leading-relaxed text-[16px] md:text-[17px] mb-8">
-              We know that some of you still prefer working with pen and paper.
-              Also, if you are an English teacher, you may want to print and
-              photocopy some of the material for your students. To meet your
-              needs, we have prepared downloadable PDF transcripts of the written
-              content of the online course.
-            </p>
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
           </div>
 
           {/* === Centered CTA Link === */}
           <div className="text-center mt-10">
             <Link
-<<<<<<< HEAD
               href={contents.cta.href}
-=======
-              href="/features"
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
               className="inline-flex items-center font-semibold text-lg px-8 py-4 rounded-full transition-all shadow-md hover:shadow-xl"
               style={{
                 backgroundColor: "#4169E1",
@@ -160,11 +115,7 @@ useEffect(() => {
                 (e.currentTarget.style.backgroundColor = "#4169E1")
               }
             >
-<<<<<<< HEAD
               {contents.cta.text}
-=======
-              View all features
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -184,7 +135,6 @@ useEffect(() => {
     </main>
   );
 }
-<<<<<<< HEAD
 
 // "use client";
 // import React from "react";
@@ -298,5 +248,3 @@ useEffect(() => {
 //     </main>
 //   );
 // }
-=======
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef

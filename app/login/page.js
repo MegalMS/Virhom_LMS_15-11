@@ -5,10 +5,7 @@ import { signIn, getSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import AuthError from "@/src/components/AuthError";
 import { useSession, signOut } from "next-auth/react";
-<<<<<<< HEAD
 import { useContent, getPageContent } from "@/src/hooks/useContent";
-=======
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
 
 
 
@@ -40,13 +37,9 @@ export default function LoginPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
-<<<<<<< HEAD
   const { data: session, status } = useSession();
   const { content, loading: contentLoading } = useContent();
   const pageContent = getPageContent(content, "login");
-=======
-    const { data: session, status } = useSession();
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
 
 
 
@@ -143,17 +136,10 @@ export default function LoginPage() {
               className="mt-5 text-3xl font-semibold text-[#3E2723]"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-<<<<<<< HEAD
               {pageContent.header?.heading || "Welcome Back"}
             </h1>
             <p className="mt-2 text-sm text-[#8B7355] text-center max-w-[20rem] leading-relaxed">
               {pageContent.header?.description || "Sign in to your account to continue."}
-=======
-              Welcome Back
-            </h1>
-            <p className="mt-2 text-sm text-[#8B7355] text-center max-w-[20rem] leading-relaxed">
-              Sign in to your account to continue.
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
             </p>
           </FadeInDiv>
 
@@ -180,11 +166,7 @@ export default function LoginPage() {
                   onFocus={() => setFocusedInput("email")}
                   onBlur={() => setFocusedInput(null)}
                   required
-<<<<<<< HEAD
                   placeholder={pageContent.form?.email_placeholder || "you@domain.com"}
-=======
-                  placeholder="you@domain.com"
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
                   className="w-full pl-10 pr-4 py-3 rounded-md bg-[#FFFDF6] border border-[#E9DCCF] text-[#3E2723] placeholder-[#CBB59D] focus:outline-none focus:ring-2 focus:ring-[#A27B5C]/30"
                 />
               </div>
@@ -211,11 +193,7 @@ export default function LoginPage() {
                   onFocus={() => setFocusedInput("password")}
                   onBlur={() => setFocusedInput(null)}
                   required
-<<<<<<< HEAD
                   placeholder={pageContent.form?.password_placeholder || "Enter your password"}
-=======
-                  placeholder="Enter your password"
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
                   className="w-full pl-10 pr-10 py-3 rounded-md bg-[#FFFDF6] border border-[#E9DCCF] text-[#3E2723] placeholder-[#CBB59D] focus:outline-none focus:ring-2 focus:ring-[#A27B5C]/30"
                 />
                 <button
@@ -240,11 +218,7 @@ export default function LoginPage() {
                 }}
               >
                 <div className="flex items-center justify-center gap-2">
-<<<<<<< HEAD
                   <span>{loading ? "Signing in..." : (pageContent.form?.sign_in || "Login to Account")}</span>
-=======
-                  <span>{loading ? "Signing in..." : "Login to Account"}</span>
->>>>>>> 6ea70ac4296d48ad876512a4daafb839a8550fef
                   {!loading && <ArrowRight size={18} />}
                 </div>
               </button>

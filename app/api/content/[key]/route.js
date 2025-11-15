@@ -3,23 +3,10 @@ export const dynamic = "force-dynamic";
 import { NextResponse } from "next/server";
 import { readJsonFile, writeJsonFile } from "../_helpers.js";
 
-const EXTERNAL_API_URL = "https://virhomlms.megascale.co.in/data/content.json";
-
 export async function GET(request, { params }) {
   try {
     const { key } = await params; // ← Await params first
-    
-    // Fetch data from external URL
-    const response = await fetch(EXTERNAL_API_URL, {
-      cache: "no-store", // Ensure fresh data on each request
-    });
-    
-    if (!response.ok) {
-      throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
-    }
-    
-    const data = await response.json();
-    
+    const data = await readJsonFile();
     if (!(key in data)) {
       return NextResponse.json(
         { ok: false, error: "Key not found" },
