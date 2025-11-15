@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "exclude": [
+    "app/[...nextauth]/page.js"
+  ]
+}
